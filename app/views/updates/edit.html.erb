@@ -1,0 +1,11 @@
+<h1> EDIT UPDATE </h1>
+
+<%= render 'form' %>
+
+<p>
+	<%= link_to "Back", project_path(@project) %> <!-- I feel that this should take you back to the specific project -->
+|
+	<%= link_to "Delete", @update, method: :delete, data: {confirm: 'Are you sure?'} %>
+</p>
+
+

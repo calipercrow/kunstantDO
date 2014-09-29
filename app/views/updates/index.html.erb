@@ -1,0 +1,18 @@
+<h1> Look, an update! </h1>
+
+
+   <!--IMAGE GOES HERE-->
+
+
+<hr />
+
+
+
+<!--<p><%= link_to "Add Comment", new_update_path %></p> 		this should link to adding a comment, not an update!-->
+
+<% @updates.each do |u| %>									<!--change this to comment-->
+	<p><%= link_to u.text, u %></p>							<!--shows comments / and annotation link -->
+	<p><%= time_ago_in_words p.created_at %> ago</p>		<!--shows how long ago it was made-->
+	<hr />
+<% end %>
+

@@ -1,0 +1,20 @@
+<h1> THIS SHOWS UPDATE </h1>
+
+<hr />
+
+<p><%= @update.text %></p>
+<p><%= time_ago_in_words @project.created_at %> ago</p>
+
+<hr />
+
+	COMMENTS WOULD GO HERE AS A LIST
+
+<hr />
+
+<p>
+	<%= link_to "Edit", edit_update_path(@update) %>
+|
+	<%= link_to "Back", projects_path %>
+|
+	<%= link_to "Delete", @project, method: :delete, data: {confirm: 'Are you sure?'} %>
+</p>
