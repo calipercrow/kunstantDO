@@ -1,8 +1,10 @@
+<!--
+
 <h1> THIS IS NEW </h1>
 
 <hr />
 
-<%= form_for @project do |f| %>  <!---make sure it's singular! this refers to the new method in controller!!! -->
+<%= form_for @project do |f| %>  	COMMENT: make sure it's singular! this refers to the new method in controller!!!
 
 	<p><%= check_box_tag(:default) %></p>
 	<p><%= label_tag(:default, "Is this a project?") %></p>
@@ -20,4 +22,14 @@
 	<%= link_to "Back", projects_path %>
 </p>
 
+-->
 
+
+
+<h1> NEW PROJECT </h1>
+
+<%= render 'form' %>
+
+<p>
+	<%= link_to 'Back', projects_path %>
+</p>

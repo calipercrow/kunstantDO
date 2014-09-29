@@ -1,8 +1,8 @@
-<h1> THIS IS EDIT </h1>
+<!--<h1> THIS IS EDIT </h1>
 
 <hr />
 
-<%= form_for @project do |f| %>  <!---make sure it's singular! this refers to the new method in controller!!! -->
+<%= form_for @project do |f| %>  COMMENT: make sure it's singular! this refers to the new method in controller!!! 
 
 	<p><%= f.label :title %>: <%= f.text_field :title %></p>
 
@@ -11,10 +11,16 @@
 	<p><%= f.submit "Save Changes" %></p>
 
 <% end %>
+-->
 
+<h1> EDIT PROJECT </h1>
+
+<%= render 'form' %>
 
 <p>
 	<%= link_to "Back", projects_path %>
 |
 	<%= link_to "Delete", @project, method: :delete, data: {confirm: 'Are you sure?'} %>
 </p>
+
+
