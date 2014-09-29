@@ -1,0 +1,26 @@
+<h1> THIS IS SHOW </h1>
+
+<hr />
+
+<strong><h2><%= @project.title %></h2></strong>
+
+<p><%= @project.description %></p>
+<p><%= @project.default %></p>
+<p><%= time_ago_in_words @project.created_at %> ago</p>
+
+<hr />
+
+<h3> COMMENTS </h3>
+
+
+
+
+<hr />
+
+<p>
+	<%= link_to "Edit", edit_project_path(@project) %>
+|
+	<%= link_to "Back", projects_path %>
+|
+	<%= link_to "Delete", @project, method: :delete, data: {confirm: 'Are you sure?'} %>
+</p>

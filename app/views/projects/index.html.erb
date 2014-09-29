@@ -1,0 +1,16 @@
+<h1> Here, you can see your projects! </h1>
+
+<hr />
+
+<p><%= link_to "Add Project", new_project_path %></p>
+
+<hr />
+
+
+<% @projects.each do |p| %>
+	<strong><p><%= link_to p.title, p %></p></strong>	<!-- shows title and links to project -->
+	<p><%= truncate p.description %></p>				<!-- cuts part of it -->
+	<p><%= time_ago_in_words p.created_at %> ago</p>	<!-- shows how long ago it was made -->
+	<hr />
+<% end %>
+
