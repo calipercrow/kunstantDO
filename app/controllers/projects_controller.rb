@@ -19,13 +19,13 @@ class ProjectsController < ApplicationController
 		@project = Project.new					# Make a var for new. Don't pass argument cuz we want it empty! Duh
 	end
 
-	def projects_params
-		params.require(:project).permit(:title, :description, :default)			# This basically says you can only pass title and desc.
+	def projects_params							# This basically says you can only pass title/desc/default
+		params.require(:project).permit(:title, :description, :default)			
 	end
 
 	# 2											# Doesn't need a view!
 	def create									# Creates record in db and redirects (porbably to index)
-		@project = Project.new(projects_params)							# Passes only title and desc.
+		@project = Project.new(projects_params)	# Passes only title and desc.
 
 		if @project.save
 			redirect_to projects_path, :notice => "Created a new project!"
@@ -50,8 +50,7 @@ class ProjectsController < ApplicationController
 		end
 	end
 #-------
-												# Doesn't need a view!
-	def destroy									# Goes ahead and deletes the record
+	def destroy									# Goes ahead and deletes the record / Doesn't need a view
 		@project = Project.find(params[:id])
 		@project.destroy
 
